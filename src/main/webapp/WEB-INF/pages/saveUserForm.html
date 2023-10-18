@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить пользователя</title>
+</head>
+<body>
+<form action="#" th:method="POST" th:action="@{/saveUser}" th:object="${newUser}">
+    <input th:type="text" th:field="*{name}" placeholder="Имя">
+    <input type="text" th:field="*{lastName}" placeholder="Фамилия">
+    <input type="number" th:field="*{age}" placeholder="Возраст">
+    <button type="submit"> Сохранить</button>
+</form>
+<a th:href="@{/}">Вернуться к списку пользователей</a>
+</body>
+</html>
